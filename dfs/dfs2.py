@@ -23,8 +23,15 @@ edges = graph_data["edges"]
 # DFS 코드
 def dfs(v):
     visited[v] = True
+    print('graph : ', graph)
+
     for nxt in graph[v]:
-        if not visited[nxt]:
+        print('nxt : ', nxt)
+
+        visited_nxt = visited[nxt]
+        print('visited_nxt : ', visited_nxt)
+
+        if not visited_nxt:
             dfs(nxt)
 
 graph = [[] for _ in range(n + 1)]
